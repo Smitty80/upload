@@ -26,7 +26,7 @@ body { font-family: 'Inter', sans-serif; }
      <nav class="hidden md:flex gap-8 text-sm font-medium">
       <a href="home.html" class="hover:text-blue-600">Home</a>
       <a href="about.html" class="text-blue-600 font-semibold">About JPM</a>
-      <!-- <a href="clients.html" class="hover:text-blue-600">Our Clients</a>  -->
+      <!-- <a href="brands.html" class="hover:text-blue-600">Our Clients</a>  -->
       <a href="team.html" class="hover:text-blue-600">Our Team</a>
       <a href="contact.html" class="hover:text-blue-600">Contact</a>     
      </nav>
@@ -104,18 +104,29 @@ body { font-family: 'Inter', sans-serif; }
 
 
 <!-- CTA -->
-<section class="bg-blue-600 text-white py-20 text-center">
-  <h3 class="text-3xl font-bold mb-6">Want to work with us?</h3>
-  <a href="contact-us.html" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100">
-    Contact Our Team
-  </a>
-</section>
+<a href="contact.html" class="block hover:opacity-95 transition-opacity">
+  <section class="bg-blue-600 text-white py-20 text-center">
+    <h3 class="text-3xl font-bold mb-6">Want to work with us?</h3>
+    <span class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100">
+      Contact Our Team
+    </span>
+  </section>
+</a>
 
 <!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-400 py-10 text-center">
   <p>J. Patrick Marketing | Kansas City</p>
   <p class="text-sm mt-2">© 2026 All Rights Reserved</p>
 </footer>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
 
+  btn.addEventListener('click', () => {
+    // This toggles between hidden and flex when you click the button
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+  });
+</script>
 </body>
 </html>
